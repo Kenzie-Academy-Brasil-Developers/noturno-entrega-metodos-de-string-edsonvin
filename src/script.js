@@ -28,10 +28,10 @@ botaoUpper.addEventListener("click",function(event){
 function lower(){
     const input = document.getElementById('stringInput').value
     let output = input.toLowerCase()
-
     const resultado = document.createElement("h2")
     resultado.innerText = output
     let displayResult = document.getElementsByClassName("textContent")[0]
+    displayResult.innerHTML = '' //Limpa o display
     displayResult.appendChild(resultado)
 }
 const botaoLower = document.getElementById('toLowerCase')
@@ -43,11 +43,12 @@ botaoLower.addEventListener("click",function(event){
 
 function replace(){
     const input = document.getElementById('stringInput').value
-    let output = input.replace('.', "")
+    let output = input.replace(/a/g, "-")
 
     const resultado = document.createElement("h2")
     resultado.innerText = output
     let displayResult = document.getElementsByClassName("textContent")[0]
+    displayResult.innerHTML = '' //Limpa o display
     displayResult.appendChild(resultado)
 }
 const botaoReplace = document.getElementById('replace')
@@ -59,11 +60,12 @@ botaoReplace.addEventListener("click",function(event){
 
 function concat(){
     const input = document.getElementById('stringInput').value
-    let output = input.concat("cancatenado")
+    let output = input.concat(" concatenado")
 
     const resultado = document.createElement("h2")
     resultado.innerText = output
     let displayResult = document.getElementsByClassName("textContent")[0]
+    displayResult.innerHTML = '' //Limpa o display
     displayResult.appendChild(resultado)
 }
 const botaoConcat = document.getElementById('concat')
@@ -75,11 +77,12 @@ botaoConcat.addEventListener("click",function(event){
 
 function split(){
     const input = document.getElementById('stringInput').value
-    let output = input.split("")
+    let output = input.split("a")
 
     const resultado = document.createElement("h2")
     resultado.innerText = output
     let displayResult = document.getElementsByClassName("textContent")[0]
+    displayResult.innerHTML = '' //Limpa o display
     displayResult.appendChild(resultado)
 }
 const botaoSplit= document.getElementById('split')
